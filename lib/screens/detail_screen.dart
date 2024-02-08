@@ -48,8 +48,8 @@ class _UserForm extends StatelessWidget {
             children: [
               SizedBox(height: 10),
               TextFormField(
-                initialValue: tempUser.nom,
-                onChanged: (value) => tempUser.nom = value,
+                initialValue: tempUser.name,
+                onChanged: (value) => tempUser.name = value,
                 validator: (value) {
                   if (value == null || value.length < 1)
                     return 'El nom és obligatori';

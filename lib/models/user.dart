@@ -3,7 +3,7 @@ import 'dart:convert';
 class User {
   User({
     this.id,
-    required this.nom,
+    required this.name,
     required this.email,
     required this.address,
     required this.phone,
@@ -12,7 +12,7 @@ class User {
   String? id;
   String address;
   String email;
-  String nom;
+  String name;
   String phone;
   String photo;
 
@@ -23,7 +23,7 @@ class User {
   factory User.fromMap(Map<String, dynamic> json) => User(
         email: json["email"],
         address: json["address"],
-        nom: json["nom"],
+        name: json["name"],
         phone: json["phone"],
         photo: json["photo"]
       );
@@ -31,10 +31,10 @@ class User {
   Map<String, dynamic> toMap() => {
         "address": address,
         "email": email,
-        "nom": nom,
+        "name": name,
         "phone": phone,
         "photo": photo
       };
 
-  User copy() => User(address: address, email: email, nom: nom, phone: phone, photo: photo, id: id);
+  User copy() => User(address: address, email: email, name: name, phone: phone, photo: photo, id: id);
 }

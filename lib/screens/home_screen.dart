@@ -49,7 +49,7 @@ class HomeScreen extends StatelessWidget {
                       userService.deleteUser(usuaris[index]);
                       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                           content: Text(
-                              '${userService.users[index].nom} esborrat')));
+                              '${userService.users[index].name} esborrat')));
                     }
                   },
                 );
@@ -61,7 +61,7 @@ class HomeScreen extends StatelessWidget {
           // per que aquest no tindrà id encara, i d'aquesta forma sabrem
           // discernir al detailscreen que estam creant un usuari nou i no
           // modificant un existent
-          userService.tempUser = User(nom: '',email: '', address: '', phone: '', photo: '' );
+          userService.tempUser = User(name: '',email: '', address: '', phone: '', photo: '' );
           Navigator.of(context).pushNamed('detail');
         },
         child: const Icon(Icons.add),

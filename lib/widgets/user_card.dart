@@ -8,8 +8,8 @@ class UserCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: CircleAvatar(child: Text(usuari.nom)),
-      title: Text(usuari.nom),
+      leading: CircleAvatar(child: Text(usuari.name)),
+      title: Text(usuari.name),
       subtitle: Text(
         "${usuari.email}",
         style: TextStyle(color: Colors.black.withOpacity(0.6)),
